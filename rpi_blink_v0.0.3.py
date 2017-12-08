@@ -21,7 +21,7 @@ def light(inPin = 18, inTime = 0.075):
 print("Here we go! Press CTRL+C to exit")
 try:
     while 1:
-        foo=int(random.randint(0, len(pins)))
+        foo=int(random.randint(0, (len(pins)-1)))
         print str(foo)
         light(inPin=int(pins[int(foo)]), inTime=float("0.075"))
 
