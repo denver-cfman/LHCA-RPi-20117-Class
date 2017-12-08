@@ -22,6 +22,38 @@ def light(inPin = 18, inTime = 0.075):
     time.sleep(inTime)
     GPIO.output(int(inPin), GPIO.LOW)
 
+def justRed(inTime = 0.075):
+    redLights = [21, 19]
+    GPIO.output(int(redLights[0]), GPIO.HIGH)
+    GPIO.output(int(redLights[1]), GPIO.HIGH)
+    time.sleep(inTime)
+    GPIO.output(int(redLights[0]), GPIO.LOW)
+    GPIO.output(int(redLights[1]), GPIO.LOW)
+
+def justGreen(inTime = 0.075):
+    greenLights = [20, 26]
+    GPIO.output(int(greenLights[0]), GPIO.HIGH)
+    GPIO.output(int(greenLights[1]), GPIO.HIGH)
+    time.sleep(inTime)
+    GPIO.output(int(greenLights[0]), GPIO.LOW)
+    GPIO.output(int(greenLights[1]), GPIO.LOW)
+
+def justYellow(inTime = 0.075):
+    yellowLights = [18 ,23 ,24 ,25 ,12 ,16]
+    for y in yellowLights:
+        GPIO.output(int(y), GPIO.HIGH)
+        time.sleep(inTime)
+        GPIO.output(int(y), GPIO.LOW)
+
+print("Here are the Red Lights")
+justRed(long("1"))
+
+print("Here are the Green Lights")
+justGreen(long("1"))
+
+print("Here are the Yellow Lights")
+justYellow(long("1"))
+
 print("Here we go! Press CTRL+C to exit")
 try:
     while 1:
