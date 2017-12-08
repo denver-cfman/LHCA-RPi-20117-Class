@@ -48,17 +48,17 @@ def justYellow(inTime = 0.075):
 print("Here are the Red Lights")
 justRed(long("1"))
 
-time.sleep("2")
+time.sleep(2)
 
 print("Here are the Green Lights")
 justGreen(long("1"))
 
-time.sleep("2")
+time.sleep(2)
 
 print("Here are the Yellow Lights")
 justYellow(long("1"))
 
-time.sleep("2")
+time.sleep(2)
 
 print("Here we go! Press CTRL+C to exit")
 # Now we will just randomly select on of the LED's and flip it on and back off again.
