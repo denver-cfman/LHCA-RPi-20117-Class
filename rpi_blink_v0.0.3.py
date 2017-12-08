@@ -9,6 +9,7 @@ pins = [ 18 ,23 ,24 ,25 ,12 ,16 ,20 ,21 ,26 ,19 ] # Broadcom pin 23 (P1 pin 16)
 # Pin Setup:
 GPIO.setmode(GPIO.BCM) # Broadcom pin-numbering scheme
 for pin in pins:
+    print str(pin)
     GPIO.setup(int(pin), GPIO.OUT) # LED pin set as output
     GPIO.output(int(pin), GPIO.LOW)
 
