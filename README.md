@@ -1,7 +1,10 @@
 # LHCA-RPi-20117-Class
 Files Used in the 2017 Raspberry Pi Class
 
-Using Conversion Utility Here
+OnLine Scratch IDE is here:
+https://scratch.mit.edu/projects/editor/?tip_bar=home
+
+Using Conversion Utility here:
 https://kurt.herokuapp.com/20to14
 
 RPi Pin Setup for Scratch Scetch is like so
