@@ -48,17 +48,25 @@ def justYellow(inTime = 0.075):
 print("Here are the Red Lights")
 justRed(long("1"))
 
+time.sleep("2")
+
 print("Here are the Green Lights")
 justGreen(long("1"))
+
+time.sleep("2")
 
 print("Here are the Yellow Lights")
 justYellow(long("1"))
 
+time.sleep("2")
+
 print("Here we go! Press CTRL+C to exit")
+# Now we will just randomly select on of the LED's and flip it on and back off again.
+# We do this forever until someone hits the Ctrl+C keys ...
 try:
     while 1:
         foo=int(random.randint(0, (len(pins)-1)))
-        light(inPin=int(pins[int(foo)]), inTime=float("0.75"))
+        light(inPin=int(pins[int(foo)]), inTime=float("0.075"))
 
 except KeyboardInterrupt: # If CTRL+C is pressed, exit cleanly:
     pwm.stop() # stop PWM
