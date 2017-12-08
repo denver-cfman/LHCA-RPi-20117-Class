@@ -21,6 +21,7 @@ print("Here we go! Press CTRL+C to exit")
 try:
     while 1:
         foo=int(random.randint(0, (len(pins)+1)))
+        print str(foo)
         light(inPin=foo, inTime=float("0.075"))
 
 except KeyboardInterrupt: # If CTRL+C is pressed, exit cleanly:
