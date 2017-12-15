@@ -23,12 +23,10 @@ def light(inPin = 18, inTime = 0.075):
     GPIO.output(int(inPin), GPIO.LOW)
 
 def justRed(inTime = 0.075):
-    redLights = [21, 19]
+    redLights = [18]
     GPIO.output(int(redLights[0]), GPIO.HIGH)
-    GPIO.output(int(redLights[1]), GPIO.HIGH)
     time.sleep(inTime)
     GPIO.output(int(redLights[0]), GPIO.LOW)
-    GPIO.output(int(redLights[1]), GPIO.LOW)
 
 def justGreen(inTime = 0.075):
     greenLights = [20, 26]
@@ -46,7 +44,7 @@ def justYellow(inTime = 0.075):
         GPIO.output(int(y), GPIO.LOW)
 
 print("Here are the Red Lights")
-justRed(long("1"))
+justRed(long("3"))
 
 time.sleep(2)
 
@@ -66,7 +64,7 @@ print("Here we go! Press CTRL+C to exit")
 try:
     while 1:
         foo=int(random.randint(0, (len(pins)-1)))
-        light(inPin=int(pins[int(foo)]), inTime=float("0.075"))
+        light(inPin=int(pins[int(foo)]), inTime=float("0.0075"))
 
 except KeyboardInterrupt: # If CTRL+C is pressed, exit cleanly:
     pwm.stop() # stop PWM
